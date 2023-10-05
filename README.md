@@ -17,11 +17,11 @@ pip install wandbtocsv
 ## How to use
 
 ``` python
-!wandb_fetch -h
+!wandbtocsv -h
 ```
 
-    usage: wandb_fetch [-h] [--entity ENTITY] [--project PROJECT]
-                       [--output_file OUTPUT_FILE]
+    usage: wandbtocsv [-h] [--entity ENTITY] [--project PROJECT]
+                      [--output_file OUTPUT_FILE]
 
     options:
       -h, --help                 show this help message and exit
@@ -35,7 +35,7 @@ pip install wandbtocsv
                                  {entity}-{project}-{mmddyy}.csv
 
 ``` python
-!wandb_fetch --entity hamelsmu --project deepspeed-data
+!wandbtocsv --entity hamelsmu --project deepspeed-data
 ```
 
     Fetching runs... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
