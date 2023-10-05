@@ -18,6 +18,7 @@ def fetch_runs(
     project: Param("Project for the WANDB runs. If not provided, attempts to fetch from environment variable 'WANDB_PROJECT'.", str) = None,
     output_file: Param("Path to save the output CSV. Default name format: {entity}-{project}-{mmddyy}.csv", str) = None
 ):
+        
     api = wandb.Api()
 
     # Retrieve entity and project from environment variables if not provided
@@ -38,7 +39,7 @@ def fetch_runs(
         runs_sample = api.runs(path=f"{entity}/{project}", per_page=1)
         total_runs = len(runs_sample)
     except Exception as e:
-        raise ValueError(f"Invalid entity '{entity}' or project '{project}': {str(e)}")
+        raise ValueError(f"Invalid entity '{entity}' or project '{project}': {str(e)}\n\nAlso, make sure you are properly authenticated. You can authenticate by using 'wandb.login() or setting the environment variable 'WANDB_API_KEY'")
 
     # Default CSV file name format
     if not output_file:

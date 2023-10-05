@@ -39,7 +39,7 @@ pip install wandbtocsv
 ```
 
     Fetching runs... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
-    Saved 224 runs to hamelsmu-deepspeed-data-100523.csv
+    Saved 231 runs to hamelsmu-deepspeed-data-100523.csv
 
 ## Bonus, explore your wandb runs in [Datasette](https://datasette.io/)
 
