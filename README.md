@@ -34,20 +34,6 @@ pip install wandbtocsv
 
     Fetching runs... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
     Saved 224 runs to hamelsmu-deepspeed-data-100523.csv
-                                                        id  ... gpu_1_mem
-    0    z0-n_gpu1-gcTrue-seq_len512-bs1-model_sz34-qua...  ...       NaN
-    1    z0-n_gpu1-gcTrue-seq_len512-bs32-model_sz13-qu...  ...       NaN
-    2    z0-n_gpu1-gcTrue-seq_len512-bs8-model_sz13-qua...  ...       NaN
-    3    z0-n_gpu1-gcTrue-seq_len512-bs4-model_sz13-qua...  ...       NaN
-    4    z0-n_gpu1-gcTrue-seq_len512-bs1-model_sz13-qua...  ...       NaN
-    ..                                                 ...  ...       ...
-    219  z0-n_gpu1-gcTrue-seq_len64-bs1-model_sz13-6912...  ...       NaN
-    220  z0-n_gpu1-gcTrue-seq_len64-bs200-model_sz7-327...  ...       NaN
-    221  z0-n_gpu1-gcTrue-seq_len64-bs64-model_sz7-2931...  ...       NaN
-    222  z0-n_gpu1-gcTrue-seq_len64-bs8-model_sz7-45632376  ...       NaN
-    223  z0-n_gpu1-gcTrue-seq_len64-bs1-model_sz7-30283126  ...       NaN
-
-    [224 rows x 200 columns]
 
 ## Bonus, explore your wandb runs in [Datasette](https://datasette.io/)
 
