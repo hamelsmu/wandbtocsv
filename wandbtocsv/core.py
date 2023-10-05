@@ -72,4 +72,5 @@ def fetch_runs(
 
     df = pd.DataFrame(all_runs_data)
     df.to_csv(output_file, index=False)
-    print(f"Saved {len(df)} runs to {output_file}")
+    print(f"Saved {len(df)} runs to {output_file}\nPreview:")
+    return df
