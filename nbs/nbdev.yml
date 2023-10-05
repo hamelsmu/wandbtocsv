@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "wandbtocsv"
+  site-url: "https://hamelsmu.github.io/wandbtocsv"
+  description: "Export summary metrics and config from runs as a csv file from a project"
+  repo-branch: main
+  repo-url: "https://github.com/hamelsmu/wandbtocsv"
