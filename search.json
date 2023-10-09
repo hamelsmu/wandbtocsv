@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfetch_runs\n\n fetch_runs (entity:str&lt;EntityfortheWANDBruns.Ifnotprovided,attemptstofetc\n             hfromenvironmentvariable'WANDB_ENTITY'.&gt;=None, project:str&lt;Pr\n             ojectfortheWANDBruns.Ifnotprovided,attemptstofetchfromenviron\n             mentvariable'WANDB_PROJECT'.&gt;=None, output_file:str&lt;Pathtosav\n             etheoutputCSV.Defaultnameformat:{entity}-{project}-{mmddyy}.c\n             sv&gt;=None)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "wandbtocsv",
+    "section": "",
+    "text": "wandbtocsv allows you to quickly export a flat csv file of the top level metrics, config, etc. from your Weights & Biases runs in an easy to use CLI interface. This utility will also get peak gpu and system memory usage for each run."
+  },
+  {
+    "objectID": "index.html#background",
+    "href": "index.html#background",
+    "title": "wandbtocsv",
+    "section": "",
+    "text": "wandbtocsv allows you to quickly export a flat csv file of the top level metrics, config, etc. from your Weights & Biases runs in an easy to use CLI interface. This utility will also get peak gpu and system memory usage for each run."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "wandbtocsv",
+    "section": "Install",
+    "text": "Install\npip install wandbtocsv"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "wandbtocsv",
+    "section": "How to use",
+    "text": "How to use\n\n!wandbtocsv -h\n\nusage: wandbtocsv [-h] [--entity ENTITY] [--project PROJECT]\n                  [--output_file OUTPUT_FILE]\n\noptions:\n  -h, --help                 show this help message and exit\n  --entity ENTITY            Entity for the WANDB runs. If not provided,\n                             attempts to fetch from environment variable\n                             'WANDB_ENTITY'.\n  --project PROJECT          Project for the WANDB runs. If not provided,\n                             attempts to fetch from environment variable\n                             'WANDB_PROJECT'.\n  --output_file OUTPUT_FILE  Path to save the output CSV. Default name format:\n                             {entity}-{project}-{mmddyy}.csv\n\n\n\n!wandbtocsv --entity hamelsmu --project deepspeed-data\n\nFetching runs... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00% 0:00:01[36m0:00:03\nSaved 480 runs to hamelsmu-deepspeed-data-100823.csv"
+  },
+  {
+    "objectID": "index.html#bonus-explore-your-wandb-runs-in-datasette",
+    "href": "index.html#bonus-explore-your-wandb-runs-in-datasette",
+    "title": "wandbtocsv",
+    "section": "Bonus, explore your wandb runs in Datasette",
+    "text": "Bonus, explore your wandb runs in Datasette\ncsvs-to-sqlite hamelsmu-deepspeed-data-100823.csv hamelsmu-deepspeed-data-100823.db\ndatasette hamelsmu-deepspeed-data-100823.db -o"
+  }
+]
