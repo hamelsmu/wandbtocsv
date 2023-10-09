@@ -38,12 +38,12 @@ pip install wandbtocsv
 !wandbtocsv --entity hamelsmu --project deepspeed-data
 ```
 
-    Fetching runs... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
-    Saved 231 runs to hamelsmu-deepspeed-data-100523.csv
+    Fetching runs... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00% 0:00:01[36m0:00:03
+    Saved 480 runs to hamelsmu-deepspeed-data-100823.csv
 
 ## Bonus, explore your wandb runs in [Datasette](https://datasette.io/)
 
 ``` bash
-csvs-to-sqlite hamelsmu-deepspeed-data-100523.csv hamelsmu-deepspeed-data-100523.db
-datasette hamelsmu-deepspeed-data-100523.db -o
+csvs-to-sqlite hamelsmu-deepspeed-data-100823.csv hamelsmu-deepspeed-data-100823.db
+datasette hamelsmu-deepspeed-data-100823.db -o
 ```

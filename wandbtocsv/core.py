@@ -47,7 +47,7 @@ def fetch_runs(
         output_file = f"{entity}-{project}-{date_str}.csv"
 
     all_runs_data = []
-
+    counter = 0
     with Progress() as progress:
         task = progress.add_task("[cyan]Fetching runs...", total=total_runs)
 
@@ -57,17 +57,23 @@ def fetch_runs(
             if last_created_at:
                 filters["created_at"] = {"$gt": last_created_at}
 
-            runs = api.runs(path=f"{entity}/{project}", per_page=50, order="created_at", filters=filters)
+            runs = api.runs(path=f"{entity}/{project}", per_page=100, order="created_at", filters=filters)
             for run in runs:
+                system_metrics = run.history(stream="events")
+                gpu_mem_cols = [c for c in system_metrics.columns if ('gpu' in c and 'memory' in c)]
                 run_data = {
                     "id": run.id,
                     "name": run.name,
+                    "state": run.state,
                     **run.summary._json_dict,
                     **{f"config_{k}": v for k, v in run.config.items() if not k.startswith('_')}
                 }
+                if gpu_mem_cols:
+                    gpu_mem_stats = system_metrics[gpu_mem_cols].max().to_dict()
+                    gpu_mem_stats = {f'peak_{k}':v for k,v in gpu_mem_stats.items()}
+                    run_data.update(gpu_mem_stats)
                 all_runs_data.append(run_data)
-
-            progress.update(task, advance=len(runs))
+                progress.update(task, advance=1)
             if len(runs) > 0:
                 last_created_at = runs[-1].created_at
 
