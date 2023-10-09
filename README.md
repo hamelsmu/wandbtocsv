@@ -6,7 +6,8 @@
 
 `wandbtocsv` allows you to quickly export a flat csv file of the top
 level metrics, config, etc. from your [Weights &
-Biases](https://wandb.ai/) runs in an easy to use CLI interface.
+Biases](https://wandb.ai/) runs in an easy to use CLI interface. This
+utility will also get peak gpu and system memory usage for each run.
 
 ## Install
 

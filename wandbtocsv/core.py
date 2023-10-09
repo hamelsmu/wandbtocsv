@@ -60,7 +60,7 @@ def fetch_runs(
             runs = api.runs(path=f"{entity}/{project}", per_page=100, order="created_at", filters=filters)
             for run in runs:
                 system_metrics = run.history(stream="events")
-                gpu_mem_cols = [c for c in system_metrics.columns if ('gpu' in c and 'memory' in c)]
+                gpu_mem_cols = [c for c in system_metrics.columns if 'memory' in c]
                 run_data = {
                     "id": run.id,
                     "name": run.name,
